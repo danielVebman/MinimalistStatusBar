@@ -7,7 +7,7 @@ The status bar is highly customizable while also ready and beautiful out of the 
 
 Show the status bar:
 
-  MinimalistStatusBar.shared.isHidden = false
+    MinimalistStatusBar.shared.isHidden = false
     
 Customize it:
 
