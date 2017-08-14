@@ -11,8 +11,8 @@ Show the status bar:
     
 Customize it:
 
-  MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
-  MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
+    MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
+    MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
 
-  // Access to the view allows extremely high customization.
-  MinimalistStatusBar.shared.statusBar.view
+    // Access to the view allows extremely high customization.
+    MinimalistStatusBar.shared.statusBar.view
