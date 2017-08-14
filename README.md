@@ -16,3 +16,6 @@ Customize it:
 
     // Access to the view allows extremely high customization.
     MinimalistStatusBar.shared.statusBar.view
+
+
+This requires the FontAwesome font. It can be found at <a href="fontawesome.io">fontawesome.io</a>.
