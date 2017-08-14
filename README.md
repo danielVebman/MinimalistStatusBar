@@ -18,4 +18,4 @@ Customize it:
     MinimalistStatusBar.shared.statusBar.view
 
 
-This requires the FontAwesome font. It can be found at <a href="fontawesome.io">fontawesome.io</a>.
+This requires the FontAwesome font. It can be found at <a href="https://www.fontawesome.io">fontawesome.io</a>.
