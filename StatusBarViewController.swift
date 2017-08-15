@@ -58,8 +58,4 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
             batteryView.tintColor = color
         }
     }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
 }
