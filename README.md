@@ -27,6 +27,8 @@ The status bar is ready out of the box, yet versatile:
     MinimalistStatusBar.shared.setBlurVisible(true, animated: false)
     // Access to the view allows extremely high customization.
     MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
+    
+It is recommended that such changes be implemented directly after setting `isHidden` to `false` to ensure expected rendering. 
 
 ## Required files
 
