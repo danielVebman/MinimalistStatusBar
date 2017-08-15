@@ -42,6 +42,7 @@ class TimeLabel: UILabel {
     }
     
     private func startTimer() {
+        update()
         Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 }
