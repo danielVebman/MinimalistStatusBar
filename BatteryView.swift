@@ -20,8 +20,8 @@ class BatteryView: UIView {
     }
     
     func setupBattery() {
-        var batteryLevel = CGFloat(UIDevice.current.batteryLevel)
-        if !UIDevice.current.isBatteryMonitoringEnabled { batteryLevel = 0 }
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        let batteryLevel = CGFloat(UIDevice.current.batteryLevel)
         
         let outside = UIBezierPath()
         outside.move(to: CGPoint(x: 85 / 5, y: 0 / 5))
