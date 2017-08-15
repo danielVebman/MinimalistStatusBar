@@ -26,6 +26,7 @@ Make sure to hide the system status bar:
 Customization is easy yet unlimited:
 
     MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
+    MinimalistStatusBar.shared.setBlurVisible(true, animated: false)
     // Access to the view allows extremely high customization.
     MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
 
