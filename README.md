@@ -1,22 +1,35 @@
 # MinimalistStatusBar
 An extremely minimalist yet beautiful status bar.
 
-MinimalistStatusBar provides a very easy to use, prepackaged framework. MinimalistStatusBar shows three data: the time, the type of internet connection, and the battery level. These cycle by fading in and out of each other every 10 seconds. 
+MinimalistStatusBar provides a very easy to use, prepackaged framework. MinimalistStatusBar shows three data: the time, the type of internet connection, and the battery level. These cycle, fading in and out every 10 seconds. 
 
-The status bar is highly customizable while also ready and beautiful out of the box. Usage is very simple:
+The status bar is ready out of the box yet versatile. Usage is very simple:
 
-Show the status bar:
+## Showing the status bar
 
-    MinimalistStatusBar.shared.isHidden = false
+It is recommended that you show the status bar in your App Delegate:
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        MinimalistStatusBar.shared.isHidden = false
+        return true
+    }
     
-Customize it:
+Make sure to hide the system status bar:
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+## Customizing the status bar    
+
+Customization is easy yet unlimited:
 
     MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
+    // Access to the view allows extremely high customization.
     MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
 
-    // Access to the view allows extremely high customization.
-    MinimalistStatusBar.shared.statusBar.view
-
+## Required files
 
 This requires the FontAwesome font. It can be found at <a href="https://www.fontawesome.io">fontawesome.io</a>. To add the font to your Xcode project
 
