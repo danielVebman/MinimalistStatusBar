@@ -30,4 +30,14 @@ final class MinimalistStatusBar {
         }
     }
     
+    func setBlurVisible(_ visible: Bool, animated: Bool) {
+        let block = {
+            self.statusBar.setBlurViewVisible(visible)
+        }
+        if visible {
+            UIView.animate(withDuration: TimeInterval(UINavigationControllerHideShowBarDuration), animations: block)
+        } else {
+            block()
+        }
+    }
 }
