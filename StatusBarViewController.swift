@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
-    private var blurView: UIVisualEffectView?
+    private var blurView: UIVisualEffectView!
     
     private var timeLabel: TimeLabel!
     private var networkLabel: NetworkLabel!
@@ -20,6 +20,8 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        blurView = UIVisualEffectView()
+        
         timeLabel = TimeLabel()
         networkLabel = NetworkLabel()
         batteryView = BatteryView()
@@ -32,8 +34,8 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
     override func viewDidLoad() {
         view.frame.size.height = MinimalistStatusBar.shared.height
         
-        blurView = UIVisualEffectView(frame: view.bounds)
-        view.addSubview(blurView!)
+        blurView.frame = view.bounds
+        view.addSubview(blurView)
         
         timeLabel.frame = view.bounds
         timeLabel.frame.origin.x -= 5
@@ -76,6 +78,6 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
     }
     
     func setBlurViewVisible(_ visible: Bool) {
-        blurView?.effect = visible ? UIBlurEffect(style: .regular) : nil
+        blurView.effect = visible ? UIBlurEffect(style: .regular) : nil
     }
 }
