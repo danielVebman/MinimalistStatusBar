@@ -3,8 +3,6 @@ An extremely minimalist yet beautiful status bar.
 
 MinimalistStatusBar provides a very easy to use, prepackaged framework. MinimalistStatusBar shows three data: the time, the type of internet connection, and the battery level. These cycle, fading in and out every 10 seconds. 
 
-The status bar is ready out of the box yet versatile. Usage is very simple:
-
 ## Showing the status bar
 
 It is recommended that you show the status bar in your App Delegate:
@@ -23,7 +21,7 @@ Make sure to hide the system status bar:
     
 ## Customizing the status bar    
 
-Customization is easy yet unlimited:
+The status bar is ready out of the box, yet versatile:
 
     MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
     MinimalistStatusBar.shared.setBlurVisible(true, animated: false)
