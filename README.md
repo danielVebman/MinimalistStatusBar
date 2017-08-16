@@ -19,7 +19,7 @@ Make sure to hide the system status bar:
         return true
     }
     
-The status bar can also be shown and hidden with `MinimalistStatusBar.shared.setBlurHidden(_:, animated:)`. The animation options are `.fade`, `.slide`, and `.none`.
+The status bar can also be shown and hidden with `MinimalistStatusBar.shared.setBlurHidden(_:animated:)`. The animation options are `.fade`, `.slide`, and `.none`.
     
 ## Customizing the status bar    
 
