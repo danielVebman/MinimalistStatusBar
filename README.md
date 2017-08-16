@@ -19,14 +19,16 @@ Make sure to hide the system status bar:
         return true
     }
     
+The status bar can also be shown and hidden with `MinimalistStatusBar.shared.setBlurHidden(_:, animated:)`. The animation options are `.fade`, `.slide`, and `.none`.
+    
 ## Customizing the status bar    
 
 The status bar is ready out of the box, yet versatile:
 
-    MinimalistStatusBar.shared.statusBar.tintColor = UIColor.blue
-    MinimalistStatusBar.shared.setBlurVisible(true, animated: false)
+    MinimalistStatusBar.shared.statusBar.tintColor = UIColor.white
+    MinimalistStatusBar.shared.setBlurHidden(false, animated: false)
     // Access to the view allows extremely high customization.
-    MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor.white
+    MinimalistStatusBar.shared.statusBar.view.backgroundColor = UIColor(colorLiteralRed: 0.259, green: 0.525, blue: 0.957, alpha: 1)
 
 ## Required files
 
