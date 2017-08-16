@@ -5,7 +5,6 @@
 //  Created by Daniel Vebman on 8/14/17.
 //  Copyright © 2017 Daniel Vebman. All rights reserved.
 //
-
 import Foundation
 import UIKit
 
@@ -59,7 +58,7 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
         tintColor = UIColor.black
     }
     
-    func animatorWillAnimate(_ animator: FadeAnimator, to view: UIView) {
+    internal func animatorWillAnimate(_ animator: FadeAnimator, to view: UIView) {
         if let view = view as? TimeLabel {
             view.update()
         } else if let view = view as? NetworkLabel {
@@ -77,7 +76,12 @@ class StatusBarViewController: UIViewController, FadeAnimatorDelegate {
         }
     }
     
-    func setBlurViewVisible(_ visible: Bool) {
-        blurView.effect = visible ? UIBlurEffect(style: .regular) : nil
+    var isBlurViewHidden: Bool {
+        get {
+            return blurView.effect == nil
+        }
+        set(bool) {
+            blurView.effect = bool ? nil : UIBlurEffect(style: .regular)
+        }
     }
 }
